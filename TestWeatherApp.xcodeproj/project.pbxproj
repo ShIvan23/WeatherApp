@@ -11,6 +11,7 @@
 		2CB52F7B2643CF7200B64E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB52F7A2643CF7200B64E86 /* ViewController.swift */; };
 		2CB52F802643CF7500B64E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB52F7F2643CF7500B64E86 /* Assets.xcassets */; };
 		2CB52F832643CF7500B64E86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB52F812643CF7500B64E86 /* LaunchScreen.storyboard */; };
+		2CB52F8B2643D23900B64E86 /* APIManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB52F8A2643D23900B64E86 /* APIManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		2CB52F7F2643CF7500B64E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CB52F822643CF7500B64E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CB52F842643CF7500B64E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CB52F8A2643D23900B64E86 /* APIManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +56,20 @@
 			children = (
 				2CB52F762643CF7200B64E86 /* AppDelegate.swift */,
 				2CB52F7A2643CF7200B64E86 /* ViewController.swift */,
+				2CB52F8C2643D24000B64E86 /* Managers */,
 				2CB52F7F2643CF7500B64E86 /* Assets.xcassets */,
 				2CB52F812643CF7500B64E86 /* LaunchScreen.storyboard */,
 				2CB52F842643CF7500B64E86 /* Info.plist */,
 			);
 			path = TestWeatherApp;
+			sourceTree = "<group>";
+		};
+		2CB52F8C2643D24000B64E86 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2CB52F8A2643D23900B64E86 /* APIManger.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB52F8B2643D23900B64E86 /* APIManger.swift in Sources */,
 				2CB52F7B2643CF7200B64E86 /* ViewController.swift in Sources */,
 				2CB52F772643CF7200B64E86 /* AppDelegate.swift in Sources */,
 			);
