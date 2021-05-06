@@ -9,25 +9,27 @@ import UIKit
 
 class WeatherListTableViewController: UITableViewController {
     
-    // MARK: - IB outlet
-    @IBOutlet weak var searchBar: UISearchBar!
-    
     // MARK: - Properties
     private var viewModel: WeatherListViewModelProtocol! {
         didSet {
             viewModel.fetchWeather {
                 self.tableView.reloadData()
             }
+            viewModel.searchTextDidChanhed = {
+                self.tableView.reloadData()
+            }
         }
     }
-        
+    
+    private let searchController = UISearchController(searchResultsController: nil)
+    
     // MARK: - Lyfe cyles methods
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = WeatherListViewModel()
         tableView.register(WeatherTableViewCell.nib(), forCellReuseIdentifier: WeatherTableViewCell.identifier)
         setupLayout()
-
+        setupSearchController()
     }
     
     // MARK: - Private methods
@@ -35,19 +37,26 @@ class WeatherListTableViewController: UITableViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
     }
-
+    
+    private func setupSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Введите город"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+    }
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         viewModel.numberOfRows()
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTableViewCell.identifier,
                                                  for: indexPath) as! WeatherTableViewCell
-
+        
         cell.viewModel = viewModel.cellViewModel(at: indexPath)
-
+        
         return cell
     }
     
@@ -59,5 +68,13 @@ class WeatherListTableViewController: UITableViewController {
                                                                  bundle: nil,
                                                                  viewModel: detailsViewModel)
         navigationController?.pushViewController(detailsViewController, animated: true)
+    }
+}
+
+// MARK: - Search results updating
+extension WeatherListTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let city = searchController.searchBar.text else { return }
+        viewModel.searchCity(city)
     }
 }
