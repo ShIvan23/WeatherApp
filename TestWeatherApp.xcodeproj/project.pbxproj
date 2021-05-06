@@ -8,22 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		2CB52F772643CF7200B64E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB52F762643CF7200B64E86 /* AppDelegate.swift */; };
-		2CB52F7B2643CF7200B64E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB52F7A2643CF7200B64E86 /* ViewController.swift */; };
 		2CB52F802643CF7500B64E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB52F7F2643CF7500B64E86 /* Assets.xcassets */; };
 		2CB52F832643CF7500B64E86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB52F812643CF7500B64E86 /* LaunchScreen.storyboard */; };
 		2CB52F8B2643D23900B64E86 /* APIManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB52F8A2643D23900B64E86 /* APIManger.swift */; };
 		2CB52F8E2643D99E00B64E86 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB52F8D2643D99E00B64E86 /* RequestManager.swift */; };
+		2CB52F982643DFB200B64E86 /* WeatherListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB52F962643DFB200B64E86 /* WeatherListTableViewController.swift */; };
+		2CB52F992643DFB200B64E86 /* WeatherListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB52F972643DFB200B64E86 /* WeatherListTableViewController.xib */; };
+		2CB52F9B2643E03C00B64E86 /* WeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB52F9A2643E03C00B64E86 /* WeatherListViewModel.swift */; };
+		2CB52F9E2643E0F600B64E86 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB52F9D2643E0F600B64E86 /* Weather.swift */; };
+		2CB52FA02643E53700B64E86 /* WeatherManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB52F9F2643E53700B64E86 /* WeatherManger.swift */; };
+		2CB52FA22643E6CA00B64E86 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB52FA12643E6CA00B64E86 /* City.swift */; };
+		2CB52FA52643F65B00B64E86 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB52FA42643F65B00B64E86 /* WeatherTableViewCell.swift */; };
+		2CB52FA72643F6B400B64E86 /* WeatherTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB52FA62643F6B400B64E86 /* WeatherTableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2CB52F732643CF7200B64E86 /* TestWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB52F762643CF7200B64E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2CB52F7A2643CF7200B64E86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2CB52F7F2643CF7500B64E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CB52F822643CF7500B64E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CB52F842643CF7500B64E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CB52F8A2643D23900B64E86 /* APIManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManger.swift; sourceTree = "<group>"; };
 		2CB52F8D2643D99E00B64E86 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		2CB52F962643DFB200B64E86 /* WeatherListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListTableViewController.swift; sourceTree = "<group>"; };
+		2CB52F972643DFB200B64E86 /* WeatherListTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherListTableViewController.xib; sourceTree = "<group>"; };
+		2CB52F9A2643E03C00B64E86 /* WeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModel.swift; sourceTree = "<group>"; };
+		2CB52F9D2643E0F600B64E86 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		2CB52F9F2643E53700B64E86 /* WeatherManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManger.swift; sourceTree = "<group>"; };
+		2CB52FA12643E6CA00B64E86 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		2CB52FA42643F65B00B64E86 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		2CB52FA62643F6B400B64E86 /* WeatherTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				2CB52F762643CF7200B64E86 /* AppDelegate.swift */,
-				2CB52F7A2643CF7200B64E86 /* ViewController.swift */,
+				2CB52F8F2643DE7000B64E86 /* WeatherList */,
 				2CB52F8C2643D24000B64E86 /* Managers */,
 				2CB52F7F2643CF7500B64E86 /* Assets.xcassets */,
 				2CB52F812643CF7500B64E86 /* LaunchScreen.storyboard */,
@@ -71,8 +85,39 @@
 			children = (
 				2CB52F8A2643D23900B64E86 /* APIManger.swift */,
 				2CB52F8D2643D99E00B64E86 /* RequestManager.swift */,
+				2CB52F9F2643E53700B64E86 /* WeatherManger.swift */,
+				2CB52F9C2643E0DD00B64E86 /* Models */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		2CB52F8F2643DE7000B64E86 /* WeatherList */ = {
+			isa = PBXGroup;
+			children = (
+				2CB52FA32643F61900B64E86 /* WeatherTableViewCell */,
+				2CB52F962643DFB200B64E86 /* WeatherListTableViewController.swift */,
+				2CB52F9A2643E03C00B64E86 /* WeatherListViewModel.swift */,
+				2CB52F972643DFB200B64E86 /* WeatherListTableViewController.xib */,
+			);
+			path = WeatherList;
+			sourceTree = "<group>";
+		};
+		2CB52F9C2643E0DD00B64E86 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CB52F9D2643E0F600B64E86 /* Weather.swift */,
+				2CB52FA12643E6CA00B64E86 /* City.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2CB52FA32643F61900B64E86 /* WeatherTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2CB52FA42643F65B00B64E86 /* WeatherTableViewCell.swift */,
+				2CB52FA62643F6B400B64E86 /* WeatherTableViewCellViewModel.swift */,
+			);
+			path = WeatherTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CB52F832643CF7500B64E86 /* LaunchScreen.storyboard in Resources */,
+				2CB52F992643DFB200B64E86 /* WeatherListTableViewController.xib in Resources */,
 				2CB52F802643CF7500B64E86 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,10 +190,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB52FA02643E53700B64E86 /* WeatherManger.swift in Sources */,
 				2CB52F8B2643D23900B64E86 /* APIManger.swift in Sources */,
-				2CB52F7B2643CF7200B64E86 /* ViewController.swift in Sources */,
 				2CB52F772643CF7200B64E86 /* AppDelegate.swift in Sources */,
+				2CB52FA72643F6B400B64E86 /* WeatherTableViewCellViewModel.swift in Sources */,
+				2CB52F982643DFB200B64E86 /* WeatherListTableViewController.swift in Sources */,
 				2CB52F8E2643D99E00B64E86 /* RequestManager.swift in Sources */,
+				2CB52F9E2643E0F600B64E86 /* Weather.swift in Sources */,
+				2CB52FA52643F65B00B64E86 /* WeatherTableViewCell.swift in Sources */,
+				2CB52FA22643E6CA00B64E86 /* City.swift in Sources */,
+				2CB52F9B2643E03C00B64E86 /* WeatherListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

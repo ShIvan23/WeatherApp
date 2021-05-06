@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol RequestProtocol {
+protocol RequestManagerProtocol {
     var header: [String : String] { get }
     func weatherRequest(city: String) -> URLRequest?
 }
 
-class RequestManager: RequestProtocol {
+class RequestManager: RequestManagerProtocol {
     
-    var header = ["X-Yandex-API-Key": "d93a5444-d068-4096-ba85-1699324ceb0f"]
+   private(set) var header = ["X-Yandex-API-Key": "d93a5444-d068-4096-ba85-1699324ceb0f"]
     
     func weatherRequest(city: String) -> URLRequest? {
         
