@@ -110,10 +110,10 @@
 		2CB52F8F2643DE7000B64E86 /* WeatherList */ = {
 			isa = PBXGroup;
 			children = (
-				2CB52FA32643F61900B64E86 /* WeatherTableViewCell */,
 				2CB52F962643DFB200B64E86 /* WeatherListTableViewController.swift */,
 				2CB52F9A2643E03C00B64E86 /* WeatherListViewModel.swift */,
 				2CB52F972643DFB200B64E86 /* WeatherListTableViewController.xib */,
+				2CB52FA32643F61900B64E86 /* WeatherTableViewCell */,
 			);
 			path = WeatherList;
 			sourceTree = "<group>";

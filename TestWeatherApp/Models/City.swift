@@ -22,4 +22,6 @@ let citiesArray = [City(name: "Москва", coordinates: "lat=55.753215&lon=37
                    City(name: "Париж", coordinates: "lat=48.856663&lon=2.351556"),
                    City(name: "Сидней", coordinates: "lat=-33.865248&lon=151.216484"),
                    City(name: "Бразилиа", coordinates: "lat=-15.802118&lon=-47.889062"),
-                   City(name: "Прага", coordinates: "lat=50.080293&lon=14.428983")]
+                   City(name: "Прага", coordinates: "lat=50.080293&lon=14.428983"),
+                   City(name: "Минск", coordinates: "lat=53.902156&lon=27.561247"),
+                   City(name: "Каир", coordinates: "lat=30.051434&lon=31.245384")]
