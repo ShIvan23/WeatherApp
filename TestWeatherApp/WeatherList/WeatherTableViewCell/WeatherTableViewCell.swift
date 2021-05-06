@@ -8,23 +8,17 @@
 import UIKit
 
 class WeatherTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var conditionLabel: UILabel!
+    
     
     var viewModel: WeatherTableViewCellViewModelProtocol! {
-        didSet {
-            var context = defaultContentConfiguration()
-            context.text = viewModel.cityName
+            didSet {
+                temperatureLabel.text = viewModel.temperature
+                cityLabel.text = viewModel.cityName
+                conditionLabel.text = viewModel.condition
+            }
         }
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

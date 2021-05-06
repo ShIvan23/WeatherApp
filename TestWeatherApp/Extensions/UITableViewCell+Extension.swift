@@ -7,13 +7,17 @@
 
 import UIKit
 
-protocol IdentifierTableViewCellProtocol {
+protocol NibTableViewCell {
     static var identifier: String { get }
 }
 
-extension UITableViewCell: IdentifierTableViewCellProtocol {
+extension UITableViewCell: NibTableViewCell {
     
     static var identifier: String {
         String(describing: Self.self)
+    }
+        
+    static func nib() -> UINib {
+        UINib(nibName: identifier, bundle: nil)
     }
 }

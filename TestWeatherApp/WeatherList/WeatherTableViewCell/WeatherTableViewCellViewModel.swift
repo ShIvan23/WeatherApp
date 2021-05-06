@@ -9,6 +9,8 @@ import Foundation
 
 protocol WeatherTableViewCellViewModelProtocol {
     var cityName: String { get }
+    var condition: String { get }
+    var temperature: String { get }
     init(weather: Weather)
 }
 
@@ -18,9 +20,18 @@ final class WeatherTableViewCellViewModel: WeatherTableViewCellViewModelProtocol
     private let weather: Weather
     
     var cityName: String {
-        weather.info.tzinfo.name
+        weather.geoObject.locality.name
     }
     
+    var condition: String {
+        weather.fact.condition
+    }
+    
+    var temperature: String {
+        "\(weather.fact.temp)°C"
+    }
+    
+    // MARK: - Initializers
     required init(weather: Weather) {
         self.weather = weather
     }

@@ -27,7 +27,8 @@ class WeatherListViewModel: WeatherListViewModelProtocol {
             
             switch result {
             case .success(let weather):
-                self.weather.append(weather)
+                let translatedWeather = ConditionTranslate.translate(weather)
+                self.weather.append(translatedWeather)
                 completion()
             case.failure(let error):
                 print(error.localizedDescription)
