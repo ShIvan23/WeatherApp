@@ -12,12 +12,13 @@ protocol WeatherListViewModelProtocol {
     func fetchWeather(completion: @escaping () -> Void)
     func numberOfRows() -> Int
     func cellViewModel(at indexPath: IndexPath) -> WeatherTableViewCellViewModelProtocol
+    func viewModelForSelectedRow(at indexPath: IndexPath) -> WeatherDetailsViewModelProtocol
 }
 
 class WeatherListViewModel: WeatherListViewModelProtocol {
     
     // MARK: Properties
-    var weather = [Weather]()
+    var weather = [Weather]() 
     
     private let weatherManager = WeatherManger()
     
@@ -43,5 +44,10 @@ class WeatherListViewModel: WeatherListViewModelProtocol {
     func cellViewModel(at indexPath: IndexPath) -> WeatherTableViewCellViewModelProtocol {
         let weather = weather[indexPath.row]
         return WeatherTableViewCellViewModel(weather: weather)
+    }
+    
+    func viewModelForSelectedRow(at indexPath: IndexPath) -> WeatherDetailsViewModelProtocol {
+        let weather = weather[indexPath.row]
+        return WeatherDetailsViewModel(weather: weather)
     }
 }

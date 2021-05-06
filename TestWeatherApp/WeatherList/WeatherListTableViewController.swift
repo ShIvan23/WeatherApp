@@ -9,6 +9,10 @@ import UIKit
 
 class WeatherListTableViewController: UITableViewController {
     
+    // MARK: - IB outlet
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    // MARK: - Properties
     private var viewModel: WeatherListViewModelProtocol! {
         didSet {
             viewModel.fetchWeather {
@@ -26,7 +30,7 @@ class WeatherListTableViewController: UITableViewController {
 
     }
     
-    // MARK: - Private Methods
+    // MARK: - Private methods
     private func setupLayout() {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
@@ -39,11 +43,21 @@ class WeatherListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTableViewCell.identifier, for: indexPath) as! WeatherTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTableViewCell.identifier,
+                                                 for: indexPath) as! WeatherTableViewCell
 
         cell.viewModel = viewModel.cellViewModel(at: indexPath)
 
         return cell
     }
     
+    // MARK: - Table view delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let detailsViewModel = viewModel.viewModelForSelectedRow(at: indexPath)
+        let detailsViewController = WeatherDetailsViewController(nibName: WeatherDetailsViewController.nibString,
+                                                                 bundle: nil,
+                                                                 viewModel: detailsViewModel)
+        navigationController?.pushViewController(detailsViewController, animated: true)
+    }
 }

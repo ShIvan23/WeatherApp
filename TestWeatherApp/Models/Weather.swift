@@ -8,22 +8,12 @@
 import Foundation
 
 struct Weather: Decodable {
-    var info: Info
     var fact: Fact
     var geoObject: GeoObject
     
     private enum CodingKeys: String, CodingKey {
-        case info
         case fact
         case geoObject = "geo_object"
-    }
-    
-    struct Info: Decodable {
-        var tzinfo: Tzinfo
-    }
-    
-    struct Tzinfo: Decodable {
-        var name: String
     }
     
     struct Fact: Decodable {
