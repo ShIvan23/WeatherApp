@@ -19,6 +19,8 @@ class WeatherListTableViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = WeatherListViewModel()
+        tableView.register(WeatherTableViewCell.self, forCellReuseIdentifier: WeatherTableViewCell.identifier)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,25 +31,24 @@ class WeatherListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        viewModel.numberOfRows()
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        viewModel.numberOfRows()
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        viewModel.numberOfRows()
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTableViewCell.identifier, for: indexPath) as! WeatherTableViewCell
 
-        // Configure the cell...
+        cell.viewModel = viewModel.cellViewModel(at: indexPath)
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

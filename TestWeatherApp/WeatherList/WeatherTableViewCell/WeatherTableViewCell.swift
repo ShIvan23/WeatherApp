@@ -8,6 +8,13 @@
 import UIKit
 
 class WeatherTableViewCell: UITableViewCell {
+    
+    var viewModel: WeatherTableViewCellViewModelProtocol! {
+        didSet {
+            var context = defaultContentConfiguration()
+            context.text = viewModel.cityName
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
