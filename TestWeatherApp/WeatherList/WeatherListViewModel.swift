@@ -47,6 +47,7 @@ class WeatherListViewModel: WeatherListViewModelProtocol {
             case .success(let weather):
                 let translatedWeather = ConditionTranslate.translate(weather)
                 self.weather.append(translatedWeather)
+                self.weather.sort { $0.geoObject.locality.name < $1.geoObject.locality.name }
                 completion()
             case.failure(let error):
                 print(error.localizedDescription)

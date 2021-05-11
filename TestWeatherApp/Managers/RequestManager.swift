@@ -9,16 +9,16 @@ import Foundation
 
 protocol RequestManagerProtocol {
     var header: [String : String] { get }
-    func weatherRequest(city: String) -> URLRequest?
+    func weatherRequest(latitude: String, longitude: String) -> URLRequest?
 }
 
 class RequestManager: RequestManagerProtocol {
     
    private(set) var header = ["X-Yandex-API-Key": "d93a5444-d068-4096-ba85-1699324ceb0f"]
     
-    func weatherRequest(city: String) -> URLRequest? {
+    func weatherRequest(latitude: String, longitude: String) -> URLRequest? {
         
-        guard let url = URL(string: "https://api.weather.yandex.ru/v2/forecast?\(city)&extra=true") else { return nil }
+        guard let url = URL(string: "https://api.weather.yandex.ru/v2/forecast?lat=\(latitude)&lon=\(longitude)&extra=true") else { return nil }
         
         var request = URLRequest(url: url)
         request.allHTTPHeaderFields = header
